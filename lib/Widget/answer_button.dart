@@ -4,7 +4,7 @@ class AnswerButton extends StatelessWidget {
   const AnswerButton(this.answerText, this.onTap, {super.key});
 
   final String answerText;
-  final void Function() onTap; 
+  final void Function() onTap;
 
   @override
   Widget build(context) {
@@ -12,7 +12,7 @@ class AnswerButton extends StatelessWidget {
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(
-          horizontal: 40,
+          horizontal: 30,
           vertical: 10,
         ),
         backgroundColor: Colors.white,
@@ -21,7 +21,10 @@ class AnswerButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
       ),
-      child: Text(answerText),
+      child: Text(
+        answerText,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

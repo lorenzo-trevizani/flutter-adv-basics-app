@@ -4,11 +4,10 @@ import 'package:adv_basics/data/questions.dart';
 import 'package:adv_basics/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen(this.chosenAnswer, this.restartQuiz, this.backToStartScreen, {super.key});
+  const ResultsScreen(this.chosenAnswer, this.switchScreen, {super.key});
 
   final List<String> chosenAnswer;
-  final void Function() restartQuiz;
-  final void Function() backToStartScreen;
+  final void Function(String screenName, {bool reset}) switchScreen;
 
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summaryData = [];
@@ -62,7 +61,9 @@ class ResultsScreen extends StatelessWidget {
                 height: 20,
               ),
               TextButton.icon(
-                onPressed: restartQuiz,
+                onPressed: () {
+                  switchScreen('question_screen', reset: true);
+                },
                 icon: const Icon(
                   Icons.refresh,
                   color: Colors.white,
@@ -80,7 +81,9 @@ class ResultsScreen extends StatelessWidget {
                 height: 10,
               ),
               TextButton.icon(
-                onPressed: backToStartScreen,
+                onPressed: () {
+                  switchScreen('start_screen', reset: true);
+                },
                 icon: const Icon(
                   Icons.keyboard_double_arrow_left_rounded,
                   color: Colors.white,

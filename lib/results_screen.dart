@@ -4,10 +4,11 @@ import 'package:adv_basics/data/questions.dart';
 import 'package:adv_basics/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen(this.chosenAnswer, this.restartQuiz, {super.key});
+  const ResultsScreen(this.chosenAnswer, this.restartQuiz, this.backToStartScreen, {super.key});
 
   final List<String> chosenAnswer;
   final void Function() restartQuiz;
+  final void Function() backToStartScreen;
 
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summaryData = [];
@@ -68,6 +69,24 @@ class ResultsScreen extends StatelessWidget {
                 ),
                 label: const Text(
                   'Restart Quiz',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton.icon(
+                onPressed: backToStartScreen,
+                icon: const Icon(
+                  Icons.keyboard_double_arrow_left_rounded,
+                  color: Colors.white,
+                ),
+                label: const Text(
+                  'Back to Start',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     color: Colors.white,

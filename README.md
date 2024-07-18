@@ -1,10 +1,10 @@
-# adv_basics
+# Flutter Adv Basics App - 
 
-A new Flutter project.
+A new Flutter project that will walk through Flutter's advanced features and core concepts by implementing a ...
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter application. The app name is `adv_basics`.
 
 A few resources to get you started if this is your first Flutter project:
 

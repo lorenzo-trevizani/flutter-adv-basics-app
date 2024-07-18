@@ -11,7 +11,7 @@ class QuestionsSummary extends StatelessWidget {
     const wrongColor = Color.fromARGB(255, 152, 52, 56);
 
     return SizedBox(
-      height: 300,
+      height: 450,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

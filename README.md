@@ -1,6 +1,9 @@
 # Flutter Adv Basics App - 
 
-A new Flutter project that will walk through Flutter's advanced features and core concepts by implementing a ...
+A new Flutter project that will walk through Flutter's advanced features and core concepts by implementing a quiz app about Flutter knowledge.
+
+Check out a video using the app:
+https://www.loom.com/share/9a1101e0f28e4d1aa607d6702850e278?sid=428f3483-8453-49b0-b9eb-a75014432d06
 
 ## Getting Started
 
